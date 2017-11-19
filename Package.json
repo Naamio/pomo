@@ -4,29 +4,26 @@
     "description": "Administration dashboard for Naamio instances.",
     "author": "Phil J. Laszkowicz <phil@fillip.pro> (https://github.com/siilime)",
     "contributors": [
-      "Gabrielle Iskandar <gabiskandar@gmail.com> (https://github.com/gabiskandar)"
+        "Gabrielle Iskandar <gabiskandar@gmail.com> (https://github.com/gabiskandar)"
     ],
     "repository": {
-      "type": "git",
-      "url": "https://gitlab.com/Omnijar/Naamio/pomo.git"
+        "type": "git",
+        "url": "https://gitlab.com/Omnijar/Naamio/pomo.git"
     },
     "license": "SEE LICENSE IN LICENSE.md",
     "scripts": {
-      "build": "webpack",
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "preferGlobal": false,
     "private": true,
     "engines": {
-      "node": ">= 4.4.7 <5.0"
+        "node": ">= 4.4.7 <5.0"
     },
-    "dependencies": {
-  
-    },
+    "dependencies": {},
     "devDependencies": {
-      "ts-loader": "^2.3.2",
-      "typescript": "^2.4.2",
-      "webpack": "^3.5.3"
+        "ts-loader": "^2.3.2",
+        "typescript": "^2.4.2",
+        "webpack": "^3.5.3"
     }
-  }
-  
+}
