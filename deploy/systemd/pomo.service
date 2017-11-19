@@ -15,7 +15,7 @@ ExecStartPre=-/usr/bin/docker kill pomo
 ExecStartPre=-/usr/bin/docker rm pomo  
 ExecStartPre=-/usr/bin/docker pull naamio/pomo:latest  
 ExecStart=/usr/bin/docker run -d \
-            --name anamalais \
+            --name pomo \
             --restart always \
             -v /etc/naamio:/etc/naamio:ro \
             -v /var/log/naamio:/var/log/naamio \
