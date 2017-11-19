@@ -1,0 +1,26 @@
+[Unit]
+Description=Web administration dashboard for Naamio.
+Documentation=https://naamio.cloud
+After=network.target
+
+[Service]
+Environment=NAAMIO_PORT=8090
+Type=simple
+RemainAfterExit=true
+Restart=on-failure
+RestartSec=10
+TimeoutStartSec=1h
+#User=naamio
+ExecStartPre=-/usr/bin/docker kill pomo  
+ExecStartPre=-/usr/bin/docker rm pomo  
+ExecStartPre=-/usr/bin/docker pull naamio/pomo:latest  
+ExecStart=/usr/bin/docker run -d \
+            --name anamalais \
+            --restart always \
+            -v /etc/naamio:/etc/naamio:ro \
+            -v /var/log/naamio:/var/log/naamio \
+            naamio/pomo:latest  
+ExecStop=/usr/bin/docker stop pomo
+
+[Install]
+WantedBy=multi-user.target  
