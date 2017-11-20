@@ -16,7 +16,7 @@ stages:
   - deploy
 
 review_app:
-  image: alpine:latest
+  image: node:8.9.1
   stage: test
   script:
     - echo "Reviewing app" 
@@ -27,7 +27,7 @@ review_app:
     - master
 
 build_app:
-  image: alpine:latest
+  image: node:8.9.1
   stage: build
   script: 
     - echo "Building the app"
@@ -43,7 +43,7 @@ build_app:
     - release
 
 test_app:
-  image: alpine:latest
+  image: node:8.9.1
   stage: test
   script:
     - echo "Testing app"
