@@ -1,7 +1,7 @@
 # Build Output Directories
 CONTAINER_URL = naamio/pomo:0.0
 
-BUILD_DIR = .dist
+BUILD_DIR = .build
 SRC_BUILD_DIR = /lib
 ASSETS_DIR = assets
 TEMPLATES_DIR = stencils
@@ -57,6 +57,10 @@ build: clean
 	done
 
 	npm run build
+
+test: build
+
+	npm test
 
 clean-container:
 
