@@ -54,7 +54,8 @@ build_app:
   tags:
     - docker
   when: manual
-  only: release
+  only: 
+    - release
 
 test_app:
   image: alpine:latest
