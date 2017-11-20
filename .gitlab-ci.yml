@@ -20,6 +20,7 @@ review_app:
   stage: test
   script:
     - echo "Reviewing app" 
+    - make prepare
     - make test
   only:
     - branches
@@ -31,6 +32,7 @@ build_app:
   stage: build
   script: 
     - echo "Building the app"
+    - make prepare
     - make build
   artifacts:
     paths:
@@ -47,6 +49,7 @@ test_app:
   stage: test
   script:
     - echo "Testing app"
+    - make prepare
     - make test
   tags:
     - docker
