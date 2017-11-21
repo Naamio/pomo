@@ -1,0 +1,54 @@
+{
+    "name": "pomo",
+    "version": "0.0.0",
+    "description": "Administration dashboard for Naamio instances.",
+    "author": "Phil J. Laszkowicz <phil@fillip.pro> (https://github.com/siilime)",
+    "contributors": [
+        "Gabrielle Iskandar <gabiskandar@gmail.com> (https://github.com/gabiskandar)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.com/Omnijar/Naamio/pomo.git"
+    },
+    "license": "SEE LICENSE IN LICENSE.md",
+    "scripts": {
+        "build": "webpack",
+        "test": "jest"
+    },
+    "preferGlobal": false,
+    "private": true,
+    "engines": {
+        "node": ">= 8.9.1 <9.0"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "jest": "^21.2.1",
+        "mocha": "^4.0.1",
+        "sinon": "^4.1.2",
+        "ts-jest": "^20.0.6",
+        "ts-loader": "^2.3.2",
+        "typescript": "^2.4.2",
+        "webpack": "^3.5.3"
+    },
+    "jest": {
+        "globals": {
+            "ts-jest": {
+                "tsConfigFile": "./assets/scripts/ts/tsconfig.json"
+            }
+        },
+        "transform": {
+            ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+        },
+        "testPathIgnorePatterns": [
+            "/node_modules/",
+            "/lib/"
+        ],
+        "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "json"
+        ]
+    }
+}
