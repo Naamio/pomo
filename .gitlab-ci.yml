@@ -1,3 +1,5 @@
+image: node:8.9.1
+
 variables:
   DOCKER_DRIVER: overlay
   CONTAINER_TEST_IMAGE: $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
@@ -15,12 +17,13 @@ stages:
   - release
   - deploy
 
+before_script:
+  - make prepare
+
 review_app:
-  image: node:8.9.1
   stage: test
   script:
     - echo "Reviewing app" 
-    - make prepare
     - make test
   only:
     - branches
@@ -28,11 +31,9 @@ review_app:
     - master
 
 build_app:
-  image: node:8.9.1
   stage: build
   script: 
     - echo "Building the app"
-    - make prepare
     - make build
   artifacts:
     paths:
@@ -45,11 +46,9 @@ build_app:
     - release
 
 test_app:
-  image: node:8.9.1
   stage: test
   script:
     - echo "Testing app"
-    - make prepare
     - make test
   tags:
     - docker
