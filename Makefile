@@ -64,8 +64,8 @@ test: build
 
 clean-container:
 
-	-docker stop anamalais
-	-docker rm anamalais
+	-docker stop pomo
+	-docker rm pomo
 	-docker rmi $(CONTAINER_URL)
 
 build-container: clean-container build
@@ -74,7 +74,7 @@ build-container: clean-container build
 
 run-container: build-container
 
-	docker run -d --name anamalais -p 8090:8090 -it $(CONTAINER_URL)
+	docker run -d --name pomo -p 8090:8090 -it $(CONTAINER_URL)
 
 build-cluster: build-container
 

@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        anamalais: "./assets/scripts/ts/pomo.ts",
+        pomo: "./assets/scripts/ts/pomo.ts",
         analytics: "./assets/scripts/ts/analytics/index.ts",
         mail: "./assets/scripts/ts/util/mail.ts",
         core: [
