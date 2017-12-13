@@ -1,0 +1,576 @@
+/**
+ * base.css
+ * Project: Anamalais
+ * Omnijar Studio
+ */
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Base Colors
+- Layout
+- Base Styles
+- Typography
+- Selectors
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Clearing
+- Media Queries
+*/
+
+/* Base Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+:root {
+    --sans-serif-font: "Cera Pro", Arial, Helvetica, sans-serif;
+    --serif-font: "Lyon Display", "Times New Roman", Times, serif;
+    --dark-base-color: rgba(0,0,0,1);
+    --light-base-color: rgba(255,255,255,1);
+    --neutral-color: rgba(230,230,230,1);
+    --primary-color: rgba(90,90,255,1);
+    --warning-color: rgba(255,80,30,1);
+    --success-color: rgba(30,180,120,1);
+    --alert-color: rgba(255,220,0,1);
+    --neutral-color-transparent: rgba(230,230,230,0.4);
+    --primary-color-transparent: rgba(90,90,255,0.4);
+    --warning-color-transparent: rgba(255,80,30,0.4);
+    --success-color-transparent: rgba(30,180,120,0.4);
+    --alert-color-transparent: rgba(255,220,0,0.4);
+    --hover-card-shadow: 0.25rem 0.125rem 0.625rem 0 rgba(0,0,0,0.1);
+    --subtle-shadow-up: 0 -0.3rem 0.3rem 0.125rem rgba(0,0,0,.03);
+    --subtle-shadow-down: 0 0.125rem 0.3rem -0.125rem rgba(0,0,0,0.3);
+    --rounded-corner: 0.25rem;
+    --icon-button-end: 3rem;
+    --light-border-line: 1px solid var(--neutral-color);
+}
+
+html {
+    background-color: var(--light-base-color);
+    color: var(--dark-base-color);
+}
+
+main {
+    background-color: var(--light-base-color);
+}
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--sans-serif-font);
+    font-feature-settings: "liga" on;
+    font-variant-ligatures: common-ligatures;  
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: grayscale;
+}
+
+main {
+    margin-bottom: 4em;
+}
+
+footer {
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+}
+
+main > section {
+    padding-bottom: 2em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--sans-serif-font);
+    font-weight: 700;
+}
+
+a, abbr, button, input, label, mark, option, optgroup, p, pre, select, span, sub, sup, textarea {
+    font-family: var(--sans-serif-font);
+}
+
+blockquote, details, figure {
+    font-family: var(--serif-font);
+    font-weight: 600;
+}
+
+h1 { 
+    line-height: 1; 
+}
+
+h2 { 
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+h3 { 
+    line-height: 1.1; 
+}
+
+h4 { 
+    line-height: 1.1; 
+    letter-spacing: 0.1em;
+}
+
+h1, h2, h3 {
+    max-width: 60em;
+}
+
+h4, h5, h6, p, blockquote {
+    max-width: 50em;
+}
+
+p { 
+    font-size: 1em;
+    font-weight: 400; 
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    word-break: break-word;
+    word-wrap: break-word;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    font-feature-settings: "liga","dlig";
+}
+
+blockquote { 
+    border-left: 0.3rem solid var(--alert-color-transparent);
+    font-size: 1.6em;
+    line-height: 1.6;
+    margin-left: 0;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-top: 1em;
+}
+
+strong {
+    font-weight: 700; 
+    opacity: 0.8;
+}
+
+b, bold {
+    font-weight: 700; 
+}
+
+em {
+    font-style: italic;
+}
+
+label, small {
+    font-size: 0.667rem;
+}
+
+abbr[title] {
+    text-decoration: none;
+}
+
+/* Selectors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+::-moz-selection {
+    color: var(--success-color);
+    background: var(--neutral-color);
+}
+
+::selection {
+    color: var(--success-color);
+    background: var(--neutral-color);
+}
+
+img::-moz-selection {
+    background-color: var(--success-color);
+    color: var(--success-color);
+}
+
+img::selection {
+    background: var(--success-color);
+}
+
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+main p a {
+    background-image: linear-gradient(180deg,transparent 0,var(--success-color-transparent) 0);
+    background-position: 0 .7rem;
+    background-repeat: no-repeat;
+    border-radius: 0.125rem;
+    color: var(--dark-base-color);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+    padding-bottom: 0.1em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    padding-top: 0.1em;
+    -webkit-transition: background-position .08s ease-out;
+    -ms-transition: background-position .08s ease-out;
+    -moz-transition: background-position .08s ease-out;
+    transition: background-position .08s ease-out;
+}
+
+/*a:hover {
+    color: var(--primary-color, #5a5aff);
+}*/
+
+main p a:hover {
+    background-position: 0;
+    background-image: linear-gradient(180deg,transparent 0,var(--success-color-transparent) 0);
+    padding-top: 0.2em;
+}
+  
+  
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"]:not(.search-submit),
+input[type="reset"],
+input[type="button"] {
+    background-color: transparent;
+    border: 1px solid var(--neutral-color, rgba(230,230,230,1));
+    box-sizing: border-box; 
+    color: rgba(0,0,0,0.6);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    height: 3rem;
+    line-height: 1rem;
+    letter-spacing: .1rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: box-shadow 0.2s;
+    white-space: nowrap;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+    box-shadow: var(--subtle-shadow-down);
+    color: var(--dark-base-color);
+    outline: 0; 
+    transition: box-shadow 0.2s;
+}
+
+.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+    background-color: var(--neutral-color-transparent);
+    box-shadow: 0 0 0 0.125rem var(--light-base-color), 0 0 0 0.25rem var(--neutral-color);
+    color: var(--dark-base-color);
+    outline: 0; 
+    transition: box-shadow 0.2s;
+}
+
+button svg,
+a svg {
+    fill: var(--dark-base-color);
+    height: 1.5rem;
+    opacity: 0.6;
+    vertical-align: middle;
+}
+
+button:hover svg {
+    fill: var(--primary-color);
+    opacity: 1;
+}
+
+button:active svg {
+    fill: var(--primary-color);
+    opacity: 0.6;
+}
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+form {
+    position: relative;
+}
+
+input,
+label,
+select,
+textarea {
+    position: relative;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    background-color: var(--light-base-color);
+    border: var(--light-border-line);
+    border-radius: 0.25em;
+    box-shadow: none;
+    box-sizing: border-box; 
+    height: 2.5em;
+    padding: 0.625em 0.75em 0.625em 0.75em;
+    position: relative;
+    transition: border 0.1s ease-out;
+}
+
+input[type="search"] {
+    padding: 0.625rem 2.5em 0.625rem 0.75rem;
+    width: 100%;
+}
+
+select {
+    background-image: url("/assets/images/vectors/icons/down.svg"), none;
+    background-repeat: no-repeat;
+    background-size: 2.4rem 1rem;
+    background-position: right center;
+    cursor: pointer;
+}
+
+option {
+    height: 2em;
+    padding: 0.5em;
+}
+
+/* Removes awkward default styles on some inputs */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+
+/* select:-moz-focusring {
+    color: transparent;
+} */
+
+textarea {
+    min-height: 4.5rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    resize: vertical;
+}
+
+label,
+legend {
+    display: block;
+    font-weight: 400; 
+    margin-bottom: 0.5rem;
+}
+
+fieldset {
+    border-width: 0; 
+    padding: 0;
+    position: relative;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline; 
+}
+
+label > p {
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 0.5em;
+}
+
+input[required] {
+    overflow-x: scroll;
+    padding-right: 2.5em;
+}
+
+[disabled],
+[disabled] {
+    border: var(--light-border-line) !important;
+    cursor: default !important;
+    opacity: 0.6;
+}
+
+[disabled]:hover, 
+[disabled]:active {
+    background-color: initial !important;
+    box-shadow: none !important;
+    color: initial !important;
+    transition: none !important;
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+    list-style: disc inside;
+}
+
+ol {
+    list-style: decimal inside;
+}
+
+ol, ul {
+    padding-left: 0;
+    margin-top: 0; 
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin: 1.5em 0 1.5em 3em;
+    font-size: 90%; 
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+    text-align: center;
+}
+
+nav li a {
+    cursor: pointer;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.25em;
+    padding: 1.25rem 0.5rem;
+    text-decoration: none;
+}
+
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+    background: #F1F1F1;
+    border: 1px solid var(--neutral-color, rgba(230,230,230,1));
+    border-radius: 0.25em; 
+    font-size: 90%;
+    margin: 0 0.2em;
+    padding: 0.2em 0.5em;
+    white-space: nowrap;
+}
+
+pre > code {
+    display: block;
+    padding: 1em 1.5em;
+    white-space: pre; 
+}
+
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+    border-bottom: 1px solid var(--neutral-color, rgba(230,230,230,1)); 
+    padding: 0.75em 1em;
+    text-align: left;
+}
+
+th:first-child,
+td:first-child {
+    padding-left: 0; 
+}
+
+th:last-child,
+td:last-child {
+    padding-right: 0; 
+}
+
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+    margin-bottom: 1.5rem; 
+}
+
+input,
+textarea,
+select,
+fieldset {
+    margin-bottom: 1.5rem; 
+}
+
+fieldset ~ fieldset {
+    margin-bottom: 0;
+}
+
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+    margin-bottom: 2.5rem; 
+}
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+    margin-top: 3em;
+    margin-bottom: 3.5em;
+    border-width: 0;
+    border-top: 1px solid var(--neutral-color, rgba(230,230,230,1)); 
+}
+
+svg {
+    clip-rule: evenodd;
+    fill: var(--dark-base-color);
+    fill-rule: evenodd;
+    height: 100%;
+    opacity: 0.6;
+    stroke-linejoin: round;
+    stroke-miterlimit: 1.41421;
+    width: 100%;
+}
