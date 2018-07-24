@@ -1,41 +1,14 @@
 /**
  * fonts.css
- * Project: Anamalais
+ * Project: Pomo
  * Omnijar Studio
  */
  
- @font-face {
-    font-family: "Cera Pro";
-    src: local("Cera Pro"),
-      local("CeraPro");
-    src: url("/assets/styles/fonts/CeraPro/CeraPro-Regular.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: "Cera Pro";
-    src: local("Cera Pro Bold"),
-      local("CeraPro Bold");
-    src: url("/assets/styles/fonts/CeraPro/CeraPro-Bold.woff2") format("woff2");
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: "Cera Pro";
-    src: local("Cera Pro Black"),
-      local("CeraPro Black");
-    src: url("/assets/styles/fonts/CeraPro/CeraPro-Black.woff2") format("woff2");
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: "Lyon Display";
-    src: local("Lyon Display Medium"),
-      local("LyonDisplay Medium");
-    src: url("/assets/styles/fonts/LyonDisplay/LyonDisplay-Medium-Web.woff2") format("woff2");
-    font-weight: 600;
-    font-style: normal;
-  }
+@font-face {
+  font-family: "Noto Sans";
+  src: local("Noto Sans"),
+       local("NotoSans");
+  src: url('../../fonts/NotoSans/NotoSans-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;     
+}

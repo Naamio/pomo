@@ -58,3 +58,11 @@ typings/
 # dotenv environment variables file
 .env
 
+# Raster images
+*.png
+*.tiff
+*.jpg
+*.jpeg
+
+# Fonts
+*.woff*

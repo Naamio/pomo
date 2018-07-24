@@ -1,4 +1,4 @@
-FROM naamio/naamio:0.0
+FROM naamio/naamio:nightly
 
 LABEL authors="Phil J. Łaszkowicz <phil@fillip.pro>"
 

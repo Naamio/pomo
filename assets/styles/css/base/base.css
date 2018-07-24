@@ -1,6 +1,6 @@
 /**
  * base.css
- * Project: Anamalais
+ * Project: Pomo
  * Omnijar Studio
  */
 
@@ -26,26 +26,16 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 :root {
-    --sans-serif-font: "Cera Pro", Arial, Helvetica, sans-serif;
-    --serif-font: "Lyon Display", "Times New Roman", Times, serif;
+    --body-font-family: "Noto Sans", Arial, Helvetica, sans-serif;
     --dark-base-color: rgba(0,0,0,1);
     --light-base-color: rgba(255,255,255,1);
     --neutral-color: rgba(230,230,230,1);
-    --primary-color: rgba(90,90,255,1);
-    --warning-color: rgba(255,80,30,1);
-    --success-color: rgba(30,180,120,1);
-    --alert-color: rgba(255,220,0,1);
-    --neutral-color-transparent: rgba(230,230,230,0.4);
-    --primary-color-transparent: rgba(90,90,255,0.4);
-    --warning-color-transparent: rgba(255,80,30,0.4);
-    --success-color-transparent: rgba(30,180,120,0.4);
-    --alert-color-transparent: rgba(255,220,0,0.4);
-    --hover-card-shadow: 0.25rem 0.125rem 0.625rem 0 rgba(0,0,0,0.1);
-    --subtle-shadow-up: 0 -0.3rem 0.3rem 0.125rem rgba(0,0,0,.03);
-    --subtle-shadow-down: 0 0.125rem 0.3rem -0.125rem rgba(0,0,0,0.3);
-    --rounded-corner: 0.25rem;
-    --icon-button-end: 3rem;
-    --light-border-line: 1px solid var(--neutral-color);
+    --action-color: rgba(0,179,161,1);
+    --warning-color: rgba(255,64,25,1);
+    --success-color: rgba(0,179,54,1);
+    --alert-color: rgba(255,165,76,1);
+    --spacing-unit: 1rem;
+    --default-transition-style: 0.2s ease;
 }
 
 html {
@@ -65,16 +55,15 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: var(--sans-serif-font);
+    font-family: var(--body-font-family);
     font-feature-settings: "liga" on;
     font-variant-ligatures: common-ligatures;  
+    font-size: 14px;
+    font-style: normal;
     font-weight: 400;
     line-height: 1.6;
     margin: 0;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: grayscale;
 }
 
 main {
@@ -88,8 +77,7 @@ footer {
 
 main > section {
     padding-bottom: 2em;
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+
 }
 
 /* Typography
@@ -106,17 +94,15 @@ h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--sans-serif-font);
     font-weight: 700;
 }
 
 a, abbr, button, input, label, mark, option, optgroup, p, pre, select, span, sub, sup, textarea {
-    font-family: var(--sans-serif-font);
+    font-weight: 400;
 }
 
 blockquote, details, figure {
-    font-family: var(--serif-font);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 h1 { 
@@ -138,17 +124,18 @@ h4 {
 }
 
 h1, h2, h3 {
-    max-width: 60em;
+    max-width: 66ch;
 }
 
 h4, h5, h6, p, blockquote {
-    max-width: 50em;
+    max-width: 50ch;
 }
 
 p { 
     font-size: 1em;
     font-weight: 400; 
     line-height: 1.6;
+    max-width: 66ch;
     margin-bottom: 1.5rem;
     word-break: break-word;
     word-wrap: break-word;
@@ -158,7 +145,6 @@ p {
 }
 
 blockquote { 
-    border-left: 0.3rem solid var(--alert-color-transparent);
     font-size: 1.6em;
     line-height: 1.6;
     margin-left: 0;
@@ -169,7 +155,6 @@ blockquote {
 
 strong {
     font-weight: 700; 
-    opacity: 0.8;
 }
 
 b, bold {
@@ -209,39 +194,6 @@ img::-moz-selection {
 img::selection {
     background: var(--success-color);
 }
-
-
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-main p a {
-    background-image: linear-gradient(180deg,transparent 0,var(--success-color-transparent) 0);
-    background-position: 0 .7rem;
-    background-repeat: no-repeat;
-    border-radius: 0.125rem;
-    color: var(--dark-base-color);
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: 700;
-    padding-bottom: 0.1em;
-    padding-left: 0.1em;
-    padding-right: 0.1em;
-    padding-top: 0.1em;
-    -webkit-transition: background-position .08s ease-out;
-    -ms-transition: background-position .08s ease-out;
-    -moz-transition: background-position .08s ease-out;
-    transition: background-position .08s ease-out;
-}
-
-/*a:hover {
-    color: var(--primary-color, #5a5aff);
-}*/
-
-main p a:hover {
-    background-position: 0;
-    background-image: linear-gradient(180deg,transparent 0,var(--success-color-transparent) 0);
-    padding-top: 0.2em;
-}
-  
   
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -251,21 +203,7 @@ input[type="submit"]:not(.search-submit),
 input[type="reset"],
 input[type="button"] {
     background-color: transparent;
-    border: 1px solid var(--neutral-color, rgba(230,230,230,1));
     box-sizing: border-box; 
-    color: rgba(0,0,0,0.6);
-    cursor: pointer;
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 700;
-    height: 3rem;
-    line-height: 1rem;
-    letter-spacing: .1rem;
-    padding: 1rem 2rem;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: box-shadow 0.2s;
     white-space: nowrap;
 }
 
@@ -279,10 +217,8 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-    box-shadow: var(--subtle-shadow-down);
     color: var(--dark-base-color);
     outline: 0; 
-    transition: box-shadow 0.2s;
 }
 
 .button:active,
@@ -290,29 +226,7 @@ button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active {
-    background-color: var(--neutral-color-transparent);
-    box-shadow: 0 0 0 0.125rem var(--light-base-color), 0 0 0 0.25rem var(--neutral-color);
-    color: var(--dark-base-color);
     outline: 0; 
-    transition: box-shadow 0.2s;
-}
-
-button svg,
-a svg {
-    fill: var(--dark-base-color);
-    height: 1.5rem;
-    opacity: 0.6;
-    vertical-align: middle;
-}
-
-button:hover svg {
-    fill: var(--primary-color);
-    opacity: 1;
-}
-
-button:active svg {
-    fill: var(--primary-color);
-    opacity: 0.6;
 }
 
 /* Forms
@@ -355,10 +269,6 @@ input[type="search"] {
 }
 
 select {
-    background-image: url("/assets/images/vectors/icons/down.svg"), none;
-    background-repeat: no-repeat;
-    background-size: 2.4rem 1rem;
-    background-position: right center;
     cursor: pointer;
 }
 
@@ -382,9 +292,9 @@ select {
     appearance: none; 
 }
 
-/* select:-moz-focusring {
+select:-moz-focusring {
     color: transparent;
-} */
+}
 
 textarea {
     min-height: 4.5rem;
@@ -396,8 +306,6 @@ textarea {
 label,
 legend {
     display: block;
-    font-weight: 400; 
-    margin-bottom: 0.5rem;
 }
 
 fieldset {
@@ -424,7 +332,6 @@ input[required] {
 
 [disabled],
 [disabled] {
-    border: var(--light-border-line) !important;
     cursor: default !important;
     opacity: 0.6;
 }
@@ -456,8 +363,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-    margin: 1.5em 0 1.5em 3em;
-    font-size: 90%; 
+    margin: 1.5em 0 0 3em;
 }
 
 li {
@@ -489,8 +395,6 @@ nav li a {
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
-    background: #F1F1F1;
-    border: 1px solid var(--neutral-color, rgba(230,230,230,1));
     border-radius: 0.25em; 
     font-size: 90%;
     margin: 0 0.2em;
@@ -509,8 +413,6 @@ pre > code {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 th,
 td {
-    border-bottom: 1px solid var(--neutral-color, rgba(230,230,230,1)); 
-    padding: 0.75em 1em;
     text-align: left;
 }
 
@@ -560,16 +462,12 @@ form {
 hr {
     margin-top: 3em;
     margin-bottom: 3.5em;
-    border-width: 0;
-    border-top: 1px solid var(--neutral-color, rgba(230,230,230,1)); 
 }
 
 svg {
     clip-rule: evenodd;
-    fill: var(--dark-base-color);
     fill-rule: evenodd;
-    height: 100%;
-    opacity: 0.6;
+    height: auto;
     stroke-linejoin: round;
     stroke-miterlimit: 1.41421;
     width: 100%;
