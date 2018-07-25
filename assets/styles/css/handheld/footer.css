@@ -3,3 +3,13 @@
  * Project: Pomo
  * Naamio
  */
+
+body > footer {
+    background-color: var(--light-base-color);
+    bottom: 0;
+    height: var(--fixed-bar-height, 60px);
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+}

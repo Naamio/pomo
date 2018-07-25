@@ -3,3 +3,33 @@
  * Project: Pomo
  * Naamio
  */
+
+footer > nav {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+footer > nav button {
+    border: 0;
+    height: var(--fixed-bar-height, 60px);
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+    width: var(--fixed-bar-height, 60px);
+}
+
+footer > nav svg {
+    height: 24px;
+    transition: var(--default-transition-style);
+    width: 24px;
+}
+
+footer > nav button:active svg,
+footer > nav button.active svg {
+    height: 28px;
+    transition: var(--default-transition-style);
+    width: 28px;
+}

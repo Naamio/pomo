@@ -3,3 +3,34 @@
  * Project: Pomo
  * Naamio
  */
+
+body > header {
+    background-color: var(--light-base-color);
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    height: var(--fixed-bar-height, 60px);
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header > button {
+    border: 0;
+    height: var(--fixed-bar-height, 60px);
+    margin-bottom: 0;
+    padding: 0;
+    width: var(--fixed-bar-height, 60px);
+}
+
+@supports (display:grid) {
+
+    body > header {
+        display: grid;
+        grid-template-columns: var(--fixed-bar-height, 60px) 1fr var(--fixed-bar-height, 60px) var(--fixed-bar-height, 60px);
+    }
+}

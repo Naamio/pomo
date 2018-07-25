@@ -27,15 +27,16 @@
 
 :root {
     --body-font-family: "Noto Sans", Arial, Helvetica, sans-serif;
-    --dark-base-color: rgba(0,0,0,1);
+    --dark-base-color: rgba(102,102,102,1);
     --light-base-color: rgba(255,255,255,1);
-    --neutral-color: rgba(230,230,230,1);
+    --neutral-color: rgba(236,237,238,1);
     --action-color: rgba(0,179,161,1);
     --warning-color: rgba(255,64,25,1);
     --success-color: rgba(0,179,54,1);
     --alert-color: rgba(255,165,76,1);
     --spacing-unit: 1rem;
     --default-transition-style: 0.2s ease;
+    --fixed-bar-height: 60px;
 }
 
 html {
@@ -58,12 +59,14 @@ body {
     font-family: var(--body-font-family);
     font-feature-settings: "liga" on;
     font-variant-ligatures: common-ligatures;  
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.6;
+    height: 100%;
+    line-height: 1.4;
     margin: 0;
     text-rendering: optimizeLegibility;
+    width: 100%;
 }
 
 main {
@@ -95,6 +98,7 @@ h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
+    line-height: 1.1;
 }
 
 a, abbr, button, input, label, mark, option, optgroup, p, pre, select, span, sub, sup, textarea {
@@ -204,6 +208,7 @@ input[type="reset"],
 input[type="button"] {
     background-color: transparent;
     box-sizing: border-box; 
+    transition: var(--default-transition-style);
     white-space: nowrap;
 }
 
@@ -219,6 +224,7 @@ input[type="reset"]:focus,
 input[type="button"]:focus {
     color: var(--dark-base-color);
     outline: 0; 
+    transition: var(--default-transition-style);
 }
 
 .button:active,
@@ -227,6 +233,7 @@ input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active {
     outline: 0; 
+    transition: var(--default-transition-style);
 }
 
 /* Forms

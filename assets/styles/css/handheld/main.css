@@ -3,3 +3,35 @@
  * Project: Pomo
  * Naamio
  */
+
+main {
+    background-color: var(--neutral-color);
+    box-sizing: border-box;
+    height: 100%;
+    margin: var(--fixed-bar-height, 60px) 0 var(--fixed-bar-height, 60px) 0;
+    min-height: calc(100vh - 2 * var(--fixed-bar-height, 60px));
+    padding: var(--spacing-unit);
+}
+
+.icon-button,
+footer nav button {
+    background-color: var(--neutral-color, rgba(236,237,238,1));
+    box-shadow: inset 0 0 0 var(--fixed-bar-height, 60px) var(--light-base-color, white);
+}
+
+.icon-button:hover,
+footer nav button:hover,
+.icon-button:active,
+footer nav button:active {
+    background-color: var(--neutral-color, rgba(236,237,238,1));
+    box-shadow: inset 0 0 0 4px var(--light-base-color, white);
+}
+
+.icon-button > label,
+footer nav button label {
+    align-self: baseline;
+    bottom: 4px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
