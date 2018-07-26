@@ -8,7 +8,26 @@
   font-family: "Noto Sans";
   src: local("Noto Sans"),
        local("NotoSans");
-  src: url('../../fonts/NotoSans/NotoSans-Regular.woff2') format('woff2');
+  src: url("../../fonts/notosans/notosans-regular-webfont.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;     
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: local("Noto Sans Bold"),
+       local("NotoSans Bold");
+  src: url("../../fonts/notosans/notosans-bold-webfont.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;     
+}
+
+@font-face {
+  font-family: "Noto Sans Condensed";
+  src: local("Noto Sans Condensed"),
+       local("NotoSans Condensed");
+  src: url("../../fonts/notosans/notosans-condensed-webfont.woff2") format("woff2");
+  font-stretch: condensed;
+  font-style: normal;
+  font-weight: 400;
 }

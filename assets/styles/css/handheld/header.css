@@ -5,9 +5,12 @@
  */
 
 body > header {
+    align-items: center;
+    -webkit-align-items: center;
     background-color: var(--light-base-color);
     display: flex;
     display: -webkit-flex;
+    flex: 0 0 auto;
     flex-direction: row;
     height: var(--fixed-bar-height, 60px);
     justify-content: space-between;
@@ -17,6 +20,16 @@ body > header {
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+body > header h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-bottom: 0;
+    padding-left: var(--fixed-bar-height, 60px);
+    text-align: center;
+    text-transform: uppercase;
 }
 
 header > button {

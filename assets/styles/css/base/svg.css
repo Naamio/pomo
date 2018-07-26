@@ -1,83 +1,99 @@
-.icon {
-    display: inline-block;
-  }
-  .icon-add {
+/**
+ * svg#css
+ * Project: Pomo
+ * Naamio
+ */
+
+svg[id*="icon"] {
+  fill: var(--dark-base-color, rgba(102,102,102,1));
+}
+
+svg[id*="icon-twotone"] .twotone-inner {
+  fill: var(--dark-base-color, rgba(102,102,102,1));
+  opacity: 0;
+}
+
+button.active svg[id*="icon-twotone"] .twotone-inner {
+  opacity: 0;
+}
+
+  #icon-add {
     width: 32px;
     height: 32px;
   }
-  .icon-arrow_back {
+  #icon-arrow_back {
     width: 32px;
     height: 32px;
   }
-  .icon-check_circle {
+  #icon-check_circle {
     width: 32px;
     height: 32px;
   }
-  .icon-favorite {
+  #icon-favorite {
     width: 32px;
     height: 32px;
   }
-  .icon-favorite_border {
+  #icon-favorite_border {
     width: 32px;
     height: 32px;
   }
-  .icon-filter_list {
+  #icon-filter_list {
     width: 32px;
     height: 32px;
   }
-  .icon-menu {
+  #icon-menu {
     width: 32px;
     height: 32px;
   }
-  .icon-photo {
+  #icon-photo {
     width: 32px;
     height: 32px;
   }
-  .icon-reply {
+  #icon-reply {
     width: 32px;
     height: 32px;
   }
-  .icon-search {
+  #icon-search {
     width: 32px;
     height: 32px;
   }
-  .icon-share {
+  #icon-share {
     width: 32px;
     height: 32px;
   }
-  .icon-trending_up {
+  #icon-trending_up {
     width: 32px;
     height: 32px;
   }
-  .icon-twotone-comment {
+  #icon-twotone-comment {
     width: 32px;
     height: 32px;
   }
-  .icon-twotone-delete {
+  #icon-twotone-delete {
     width: 32px;
     height: 32px;
   }
-  .icon-twotone-edit {
+  #icon-twotone-edit {
     width: 32px;
     height: 32px;
   }
-  .icon-twotone-pages {
+  #icon-twotone-pages {
     width: 32px;
     height: 32px;
   }
-  .icon-twotone-posts {
+  #icon-twotone-posts {
     width: 32px;
     height: 32px;
   }
-  .icon-twotone-publish {
+  #icon-twotone-publish {
     width: 32px;
     height: 32px;
   }
-  .icon-twotone-unpublish {
+  #icon-twotone-unpublish {
     width: 32px;
     height: 32px;
   }
-  .icon-video {
+  #icon-video {
     width: 32px;
     height: 32px;
   }

@@ -27,6 +27,7 @@
 
 :root {
     --body-font-family: "Noto Sans", Arial, Helvetica, sans-serif;
+    --condensed-font-family: "Noto Sans Condensed", Arial, Helvetica, sans-serif;
     --dark-base-color: rgba(102,102,102,1);
     --light-base-color: rgba(255,255,255,1);
     --neutral-color: rgba(236,237,238,1);
@@ -36,7 +37,7 @@
     --alert-color: rgba(255,165,76,1);
     --spacing-unit: 1rem;
     --default-transition-style: 0.2s ease;
-    --fixed-bar-height: 60px;
+    --fixed-bar-height: 50px;
 }
 
 html {
@@ -170,7 +171,9 @@ em {
 }
 
 label, small {
+    font-family: var(--condensed-font-family);
     font-size: 0.667rem;
+    font-stretch: condensed;
 }
 
 abbr[title] {
@@ -324,17 +327,6 @@ fieldset {
 input[type="checkbox"],
 input[type="radio"] {
     display: inline; 
-}
-
-label > p {
-    display: inline-block;
-    font-weight: 400;
-    margin-left: 0.5em;
-}
-
-input[required] {
-    overflow-x: scroll;
-    padding-right: 2.5em;
 }
 
 [disabled],

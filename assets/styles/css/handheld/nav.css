@@ -7,29 +7,40 @@
 footer > nav {
     display: flex;
     display: -webkit-flex;
+    flex: 2 0 20%;
     flex-direction: row;
-    justify-content: space-between;
-    -webkit-justify-content: space-between;
+    justify-content: stretch;
+    -webkit-justify-content: stretch;
 }
 
 footer > nav button {
     border: 0;
     height: var(--fixed-bar-height, 60px);
+    flex-grow: 2;
+    -webkit-flex-grow: 2;
     margin-bottom: 0;
+    min-width: var(--fixed-bar-height, 60px);
     padding: 0;
     position: relative;
-    width: var(--fixed-bar-height, 60px);
 }
 
 footer > nav svg {
-    height: 24px;
+    height: 20px;
     transition: var(--default-transition-style);
     width: 24px;
 }
 
 footer > nav button:active svg,
 footer > nav button.active svg {
-    height: 28px;
+    height: 32px;
     transition: var(--default-transition-style);
-    width: 28px;
+    width: 24px;
+}
+
+footer > nav button:active svg, 
+footer > nav button.active svg, 
+nav button:active label,
+nav button.active label  {
+    color: var(--action-color);
+    fill: var(--action-color);
 }
