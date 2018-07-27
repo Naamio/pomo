@@ -8,8 +8,8 @@ main {
     background-color: var(--neutral-color);
     box-sizing: border-box;
     height: 100%;
-    margin: var(--fixed-bar-height, 60px) 0 var(--fixed-bar-height, 60px) 0;
-    min-height: calc(100vh - 2 * var(--fixed-bar-height, 60px));
+    margin: var(--fixed-bar-height, 50px) 0 var(--fixed-bar-height, 50px) 0;
+    min-height: calc(100vh - 2 * var(--fixed-bar-height, 50px));
     padding: var(--spacing-unit);
 }
 
@@ -18,7 +18,7 @@ footer nav button {
     align-items: center;
     -webkit-align-items: center;
     background-color: var(--neutral-color, rgba(236,237,238,1));
-    box-shadow: inset 0 0 0 var(--fixed-bar-height, 60px) var(--light-base-color, white);
+    box-shadow: inset 0 0 0 var(--fixed-bar-height, 50px) var(--light-base-color, white);
     display: flex;
     display: -webkit-flex;
     flex: 0 0 auto;

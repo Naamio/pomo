@@ -7,7 +7,7 @@
 body > footer {
     background-color: var(--light-base-color);
     bottom: 0;
-    height: var(--fixed-bar-height, 60px);
+    height: var(--fixed-bar-height, 50px);
     margin: 0;
     padding: 0;
     position: fixed;
@@ -15,8 +15,8 @@ body > footer {
 }
 
 button#footer-profile-link svg {
-    height: var(--fixed-bar-height, 60px);
-    width: var(--fixed-bar-height, 60px);
+    height: var(--fixed-bar-height, 50px);
+    width: var(--fixed-bar-height, 50px);
 }
 
 button#footer-profile-link svg circle#outline {
