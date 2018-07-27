@@ -13,3 +13,17 @@ body > footer {
     position: fixed;
     width: 100%;
 }
+
+button#footer-profile-link svg {
+    height: var(--fixed-bar-height, 60px);
+    width: var(--fixed-bar-height, 60px);
+}
+
+button#footer-profile-link svg circle#outline {
+    stroke-width: 0;
+}
+
+button#footer-profile-link svg circle#navbar-user-image {
+    clip-path: circle(50% at 50% 50%);
+    fill: white;
+}

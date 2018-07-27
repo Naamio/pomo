@@ -36,9 +36,24 @@
             </svg>
             <label>posts</label>
         </button>
-        <button>
+        <button id="footer-profile-link">
             <svg width="auto" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                <circle>
+                <svg aria-hidden="true" focusable="false" style="width:0;height:0;position:absolute;">
+                    <linearGradient id="gradient-horizontal">
+                        <stop offset="0%" stop-color="var(--color-stop-1)" />
+                        <stop offset="50%" stop-color="var(--color-stop-2)" />
+                        <stop offset="100%" stop-color="var(--color-stop-3)" />
+                    </linearGradient>
+                    <linearGradient id="gradient-vertical" x2="0" y2="1">
+                        <stop offset="0%" stop-color="var(--color-stop-1)" />
+                        <stop offset="50%" stop-color="var(--color-stop-2)" />
+                        <stop offset="100%" stop-color="var(--color-stop-3)" />
+                    </linearGradient>
+                </svg>
+                <circle class="icon-hgradient" id="outline" cx="50%" cy="50%" r="30%">
+                </circle>
+                <circle id="navbar-user-image" cx="50%" cy="50%" r="26%">
+
                 </circle>
             </svg>
         </button>

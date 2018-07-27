@@ -17,6 +17,28 @@ button.active svg[id*="icon-twotone"] .twotone-inner {
   opacity: 0;
 }
 
+#gradient-horizontal {
+  --color-stop-1: #a770ef;
+  --color-stop-2: #cf8bf3;
+  --color-stop-3: #fdb99b;
+}
+
+#gradient-vertical {
+  --color-stop-1: #00c3ff;
+  --color-stop-2: #77e190;
+  --color-stop-3: #ffff1c;
+}
+
+.icon-hgradient {
+  fill: url(#gradient-horizontal) var(--dark-base-color, rgba(102,102,102,1));
+  /* We could use it as a stroke fill too:
+  stroke: url(#gradient-horizontal) var(--dark-base-color, rgba(102,102,102,1)); */
+}
+
+.icon-vgradient {
+  fill: url(#gradient-vertical) var(--dark-base-color, rgba(102,102,102,1));
+}
+
   #icon-add {
     width: 32px;
     height: 32px;
