@@ -18,6 +18,8 @@ footer > nav button {
     height: var(--fixed-bar-height, 60px);
     flex-grow: 2;
     -webkit-flex-grow: 2;
+    flex-basis: 20%;
+    -webkit-flex-basis: 20%;
     margin-bottom: 0;
     min-width: var(--fixed-bar-height, 60px);
     padding: 0;
