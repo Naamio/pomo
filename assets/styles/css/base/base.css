@@ -315,7 +315,12 @@ textarea {
 
 label,
 legend {
+    color: var(--dark-base-color);
     display: block;
+}
+
+label {
+    line-height: 1.3;
 }
 
 fieldset {
