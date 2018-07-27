@@ -70,7 +70,7 @@
 </symbol>
 <symbol id="icon-twotone-edit" viewBox="0 0 32 32">
 <title>twotone-edit</title>
-<path class="twotone-inner" fill="#000" opacity="0.3" style="fill: var(--color1, #000)" d="M6.667 24.107v1.227h1.227l12.080-12.080-1.227-1.227z"></path>
+<path class="twotone-inner" fill="#000" opacity="0" style="fill: var(--color1, #000)" d="M6.667 24.107v1.227h1.227l12.080-12.080-1.227-1.227z"></path>
 <path d="M27.613 9.387c0.52-0.52 0.52-1.36 0-1.88l-3.12-3.12c-0.267-0.267-0.6-0.387-0.947-0.387s-0.68 0.133-0.933 0.387l-2.44 2.44 5 5 2.44-2.44z"></path>
 <path d="M4 23v5h5l14.747-14.747-5-5-14.747 14.747zM7.893 25.333h-1.227v-1.227l12.080-12.080 1.227 1.227-12.080 12.080z"></path>
 </symbol>
