@@ -18,15 +18,15 @@ button.active svg[id*="icon-twotone"] .twotone-inner {
 }
 
 #gradient-horizontal {
-  --color-stop-1: #a770ef;
-  --color-stop-2: #cf8bf3;
-  --color-stop-3: #fdb99b;
+  --color-stop-1: rgb(255,145,112);
+  --color-stop-2: rgb(255,117,97);
+  --color-stop-3: rgb(255,88,82);
 }
 
 #gradient-vertical {
-  --color-stop-1: #00c3ff;
-  --color-stop-2: #77e190;
-  --color-stop-3: #ffff1c;
+  --color-stop-1: rgb(0,184,230);
+  --color-stop-2: rgb(0,179,161);
+  --color-stop-3: rgb(0,179,107);
 }
 
 .icon-hgradient {
