@@ -31,8 +31,6 @@ button.active svg[id*="icon-twotone"] .twotone-inner {
 
 .icon-hgradient {
   fill: url(#gradient-horizontal) var(--dark-base-color, rgba(102,102,102,1));
-  /* We could use it as a stroke fill too:
-  stroke: url(#gradient-horizontal) var(--dark-base-color, rgba(102,102,102,1)); */
 }
 
 .icon-vgradient {
@@ -43,11 +41,11 @@ button.active svg[id*="icon-twotone"] .twotone-inner {
     width: 32px;
     height: 32px;
   }
-  #icon-arrow_back {
+  #icon-arrow-back {
     width: 32px;
     height: 32px;
   }
-  #icon-check_circle {
+  #icon-check-circle {
     width: 32px;
     height: 32px;
   }
@@ -55,11 +53,11 @@ button.active svg[id*="icon-twotone"] .twotone-inner {
     width: 32px;
     height: 32px;
   }
-  #icon-favorite_border {
+  #icon-favorite-border {
     width: 32px;
     height: 32px;
   }
-  #icon-filter_list {
+  #icon-filter-list {
     width: 32px;
     height: 32px;
   }
@@ -83,7 +81,7 @@ button.active svg[id*="icon-twotone"] .twotone-inner {
     width: 32px;
     height: 32px;
   }
-  #icon-trending_up {
+  #icon-trending-up {
     width: 32px;
     height: 32px;
   }
