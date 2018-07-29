@@ -1,6 +1,7 @@
 FROM naamio/naamio:nightly
 
 LABEL authors="Phil J. Łaszkowicz <phil@fillip.pro>"
+LABEL maintainer="gabiskandar@gmail.com"
 
 RUN mkdir -p /usr/share/naamio/pomo
 
